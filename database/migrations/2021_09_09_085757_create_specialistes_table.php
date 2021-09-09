@@ -6,24 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateSpecialistesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('specialistes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('nom');
+            $table->string('postnom');
+            $table->string('prenom');
+            $table->string('adresse');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('specialistes');
