@@ -4,11 +4,16 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSpecialistesTable extends Migration
+class CreateSpecialistsTable extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
-        Schema::create('specialistes', function (Blueprint $table) {
+        Schema::create('specialists', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string('nom');
@@ -18,8 +23,13 @@ class CreateSpecialistesTable extends Migration
         });
     }
 
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
-        Schema::dropIfExists('specialistes');
+        Schema::dropIfExists('specialists');
     }
 }
